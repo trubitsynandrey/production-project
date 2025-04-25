@@ -5,7 +5,8 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { AboutPage } from 'pages/AboutPage'
 import { MainPage } from 'pages/MainPage'
 import 'app/styles/index.scss'
-import { useTheme } from 'app/theme/useTheme'
+import { useTheme } from 'app/providers/theme/useTheme'
+import { AppRouter } from 'app/providers/router'
 
 export enum Theme {
   LIGHT = 'light',
@@ -23,12 +24,7 @@ export const App = () => {
       <Link to={'/about'}>
         О сайте
       </Link>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path={'/about'} element={<AboutPage />} />
-          <Route path={'/'} element={<MainPage />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   )
 }
