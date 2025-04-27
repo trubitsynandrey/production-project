@@ -7,6 +7,7 @@ import { MainPage } from 'pages/MainPage'
 import 'app/styles/index.scss'
 import { useTheme } from 'app/providers/theme/useTheme'
 import { AppRouter } from 'app/providers/router'
+import { Navbar } from 'widgets/Navbar'
 
 export enum Theme {
   LIGHT = 'light',
@@ -14,16 +15,10 @@ export enum Theme {
 }
 
 export const App = () => {
-  const { theme, toggleTheme } = useTheme()
+  const { theme } = useTheme()
   return (
     <div className={classNames('app', {}, [theme])}>
-      <button onClick={toggleTheme}>TOGGLE</button>
-      <Link to={'/'}>
-        Главная
-      </Link>
-      <Link to={'/about'}>
-        О сайте
-      </Link>
+      <Navbar />
       <AppRouter />
     </div>
   )
