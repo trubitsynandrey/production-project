@@ -6,9 +6,9 @@ export function classNames(cls: string, modes?: Modes, additional?: string[]): s
     ...additional.filter(Boolean),
     ...Object.entries(modes)
       .reduce((prev, current) => {
-        const [cls, value] = current
-        if (Boolean(value)) return [...prev, cls]
-        else return prev
-      }, [] as string[])
-  ].join(' ')
+        const [clsKey, value] = current;
+        if (value) return [...prev, clsKey];
+        return prev;
+      }, [] as string[]),
+  ].join(' ');
 }
