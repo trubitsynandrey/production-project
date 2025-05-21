@@ -5,17 +5,10 @@ import { useTheme } from 'app/providers/theme/useTheme';
 import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
-import { useTranslation } from 'react-i18next';
 
 export enum Theme {
   LIGHT = 'light',
   DARK = 'dark',
-}
-
-function MyComponent() {
-  const { t } = useTranslation();
-
-  return <h1>{t('Welcome to React')}</h1>;
 }
 
 export function App() {
@@ -24,7 +17,6 @@ export function App() {
     <Suspense fallback="">
       <div className={classNames('app', {}, [theme])}>
         <Navbar />
-        <MyComponent />
         <div className="content-page">
           <Sidebar />
           <AppRouter />
