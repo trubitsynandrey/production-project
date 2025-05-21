@@ -1,5 +1,7 @@
 {
   "Welcome to React": "Welcome to React",
   "Main page": "Main page",
-  "Page not found": "Page not found"
+  "Page not found": "Page not found",
+  "Unexpected error happened": "Unexpected error happened",
+  "Reload the page": "Reload the page"
 }

@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import 'app/styles/index.scss';
 import { useTheme } from 'app/providers/theme/useTheme';
@@ -13,6 +13,7 @@ export enum Theme {
 
 export function App() {
   const { theme } = useTheme();
+
   return (
     <Suspense fallback="">
       <div className={classNames('app', {}, [theme])}>
