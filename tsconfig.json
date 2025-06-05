@@ -33,7 +33,7 @@
     // import React from 'react';
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src", "app", "types", "global.d.ts", "./config/jest/setupTests.ts"],
+  "include": ["src", "app", "types", "global.d.ts", "./config/jest/setupTests.ts", "./src/**/*.{ts, tsx}"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
