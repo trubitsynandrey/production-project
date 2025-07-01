@@ -8,7 +8,7 @@ export default {
   component: AboutPage,
 } as ComponentMeta<typeof AboutPage>;
 
-const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage {...args} />;
+const Template: ComponentStory<typeof AboutPage> = (args: object) => <AboutPage {...args} />;
 
 export const Light: Story = Template.bind({});
 
