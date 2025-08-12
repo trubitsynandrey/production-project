@@ -32,7 +32,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
         data-testid="sidebar-toggle"
         onClick={onToggle}
         className={cls.collapseButton}
-        squared
+        square
         size={ButtonSize.L}
       >
         {collapsed ? '>' : '<'}
